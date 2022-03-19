@@ -1,0 +1,35 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.2rem 8rem;
+
+  .author-info {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    .avatar {
+      width: 5.2rem;
+      height: 5.2rem;
+      border-radius: 2px;
+    }
+  }
+
+  .logo {
+    width: 8.5rem;
+    height: 5.2rem;
+  }
+
+  .button {
+    width: 22.7rem;
+    height: 5.2rem;
+    padding: 1.7rem 2.8rem;
+    line-height: 1.8rem;
+    font-size: inherit;
+    color: white;
+    background-color: #585cc6;
+    border-color: transparent;
+    border-radius: 2px;
+  }
+}
