@@ -1,0 +1,83 @@
+.welcome {
+  background-color: transparent;
+  padding: 9.3rem 8rem 10rem;
+
+  h1 {
+    max-width: 115.7rem;
+    font-weight: 500;
+    font-size: 12.4rem;
+    line-height: 14.8rem;
+    color: white;
+    margin-bottom: 8.8rem;
+  }
+
+  .wrapper {
+    display: flex;
+
+    .wrapper-img {
+      width: 51.9rem;
+      height: 38.3rem;
+      position: relative;
+      top: 3.2rem;
+      border-radius: 2px;
+      overflow: hidden;
+      flex-grow: 1;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .author-info {
+      width: 76.1rem;
+      height: 38.3rem;
+      padding: 4rem 4rem 4.4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-radius: 2px;
+      background-color: white;
+      flex-grow: 1;
+
+      .name-year {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        //   margin-bottom: 2rem;
+
+        h3 {
+          font-weight: 700;
+          font-size: 3.2rem;
+          line-height: 3.2rem;
+          color: #585cc6;
+        }
+
+        span {
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+          color: #8a8a8a;
+        }
+      }
+
+      .town-gender-year {
+        display: flex;
+        justify-content: flex-start;
+        gap: 4rem;
+        font-weight: 400;
+        //   margin-bottom: 1.8rem;
+      }
+
+      .about-self,
+      .ps {
+        font-weight: 500;
+      }
+
+      // .ps {
+      //  text-transform: ;
+      // }
+    }
+  }
+}

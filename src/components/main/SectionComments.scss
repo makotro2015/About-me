@@ -1,0 +1,45 @@
+.section-comments {
+  display: flex;
+  align-items: flex-end;
+  gap: 3.4rem;
+  background-color: transparent;
+  padding: 5.2rem 8rem 10.6rem 0;
+
+  .content {
+    width: 119.8rem;
+    height: 52.5rem;
+    padding: 5.6rem 5.6rem 6rem 8rem;
+    border-radius: 2px;
+    background-color: white;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        font-weight: 500;
+        font-size: 6.8rem;
+        line-height: 8.8rem;
+        color: #333;
+        margin-bottom: 3.8rem;
+      }
+    }
+
+    .comments {
+      display: flex;
+      gap: 2.4rem;
+    }
+  }
+  .btns-toggle {
+    display: flex;
+    gap: 1.6rem;
+
+    button {
+      width: 5.6rem;
+      height: 5.6rem;
+      background-color: white;
+      border-color: transparent;
+    }
+  }
+}
