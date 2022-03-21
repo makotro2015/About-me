@@ -1,4 +1,4 @@
-.welcome {
+.section {
   background-color: transparent;
   padding: 9.3rem 8rem 10rem;
 
@@ -14,7 +14,7 @@
   .wrapper {
     display: flex;
 
-    .wrapper-img {
+    .wrapperImg {
       width: 51.9rem;
       height: 38.3rem;
       position: relative;
@@ -28,7 +28,7 @@
       }
     }
 
-    .author-info {
+    .authorInfo {
       width: 76.1rem;
       height: 38.3rem;
       padding: 4rem 4rem 4.4rem;
@@ -40,7 +40,7 @@
       background-color: white;
       flex-grow: 1;
 
-      .name-year {
+      .nameYear {
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -62,7 +62,7 @@
         }
       }
 
-      .town-gender-year {
+      .townGenderYear {
         display: flex;
         justify-content: flex-start;
         gap: 4rem;
@@ -70,14 +70,10 @@
         //   margin-bottom: 1.8rem;
       }
 
-      .about-self,
+      .aboutSelf,
       .ps {
         font-weight: 500;
       }
-
-      // .ps {
-      //  text-transform: ;
-      // }
     }
   }
 }

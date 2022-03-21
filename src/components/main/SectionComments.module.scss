@@ -1,7 +1,4 @@
-.section-comments {
-  display: flex;
-  align-items: flex-end;
-  gap: 3.4rem;
+.section {
   background-color: transparent;
   padding: 5.2rem 8rem 10.6rem 0;
 
@@ -24,22 +21,6 @@
         color: #333;
         margin-bottom: 3.8rem;
       }
-    }
-
-    .comments {
-      display: flex;
-      gap: 2.4rem;
-    }
-  }
-  .btns-toggle {
-    display: flex;
-    gap: 1.6rem;
-
-    button {
-      width: 5.6rem;
-      height: 5.6rem;
-      background-color: white;
-      border-color: transparent;
     }
   }
 }

@@ -1,0 +1,36 @@
+.mainContainer {
+  position: relative;
+  height: 100%;
+  width: 106.2rem;
+
+  .window {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    .allCommentsContainer {
+      height: 100%;
+      display: flex;
+      gap: 2.4rem;
+      transition: translate;
+      transition-property: transform;
+      transition-duration: 300ms;
+      transition-timing-function: ease-in-out;
+    }
+  }
+
+  .btnsToggle {
+    display: flex;
+    position: absolute;
+    left: 115rem;
+    bottom: 6.5rem;
+    gap: 1.6rem;
+
+    button {
+      width: 5.6rem;
+      height: 5.6rem;
+      background-color: white;
+      border-color: transparent;
+    }
+  }
+}

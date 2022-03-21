@@ -1,12 +1,15 @@
 import React from 'react';
-import './Comment.scss';
+import s from './Comment.module.scss';
 
 function Comment (props) {
     return (
-<div className='comment'>
-    <div className='top'>
-        <h3>{props.user.name}</h3>
-        <p className='date'>{props.user.date}</p>       
+<div className={s.comment}>
+    <div className={s.top}>
+        <div className={s.userInfo}>
+            <img className={s.ava} src={props.user.url} alt='Фотография пользователя'/>
+            <h3>{props.user.name}</h3>
+        </div>  
+        <p className={s.date}>{props.user.date}</p>       
     </div>
     <p>{props.user.comment}</p>
 </div>
