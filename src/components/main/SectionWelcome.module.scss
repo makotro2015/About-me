@@ -45,7 +45,6 @@
         justify-content: space-between;
         width: 100%;
         align-items: center;
-        //   margin-bottom: 2rem;
 
         h3 {
           font-weight: 700;
@@ -67,12 +66,23 @@
         justify-content: flex-start;
         gap: 4rem;
         font-weight: 400;
-        //   margin-bottom: 1.8rem;
+
+        .gender {
+          display: flex;
+          gap: 1rem;
+          align-items: flex-end;
+        }
       }
 
       .aboutSelf,
       .ps {
         font-weight: 500;
+      }
+
+      .pet {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
       }
     }
   }
