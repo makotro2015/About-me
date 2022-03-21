@@ -1,9 +1,9 @@
 import React from 'react';
-import AuthorInfo from '../../configurations/authorInfo';
-import avatar from '../../image/author.png';
+import AuthorInfo from '../../../configurations/authorInfo';
+import avatar from '../../../image/author.png';
 import s from './SectionWelcome.module.scss';
-import pet from './../../image/pet.png';
-import gender from './../../image/female.png';
+import pet from './../../../image/pet.png';
+import gender from './../../../image/female.png';
 
 function SectionWelcome () {
     return (

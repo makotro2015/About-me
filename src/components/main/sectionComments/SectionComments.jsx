@@ -1,9 +1,9 @@
 import React from 'react';
-import Comment from './Comment';
-import Carousel from './Carousel';
+import Comment from './comment/Comment';
+import Carousel from './carousel/Carousel';
 import s from './SectionComments.module.scss';
-import Button from '../button/Button';
-import commentsData from '../../configurations/comments.js';
+import Button from '../../button/Button';
+import commentsData from '../../../configurations/comments.js';
 
 function SectionComments () {
     let commentsElements = commentsData.map(c =>  <Comment user={{...c}}/>)

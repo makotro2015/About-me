@@ -1,7 +1,7 @@
 import React from 'react';
 import './Main.scss';
-import SectionComments from './SectionComments';
-import SectionWelcome from './SectionWelcome';
+import SectionComments from './sectionComments/SectionComments';
+import SectionWelcome from './sectionWelcome/SectionWelcome';
 
 function Main () {
     return (
