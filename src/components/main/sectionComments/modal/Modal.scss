@@ -1,0 +1,32 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+
+  .content {
+    width: 67.6rem;
+    height: 44.3rem;
+    background-color: white;
+    padding: 2.4rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.9);
+    transition: 0.4s;
+  }
+
+  .content.active {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+  }
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}

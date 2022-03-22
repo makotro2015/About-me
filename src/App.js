@@ -4,11 +4,12 @@ import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Main from './components/main/Main';
 
-function App() {
+
+function App(props) {
   return (  
-    <div>
-    <Header />
-    <Main />
+    <div className='app'>
+    <Header authorInfo={props.state.authorInfo} />
+    <Main state={props.state} addComment={props.addComment} />
     <Footer />
     </div>
   );
