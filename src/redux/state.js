@@ -53,13 +53,13 @@ let state = {
 
 export const addComment = (name, comment) => {
   const newComment = {
-    url: { user1 },
+    url: { user2 },
     name: name,
     date: "16.12.2021",
     comment: comment,
   };
   state.commentsData.push(newComment);
-  renderEntireTree();
+  renderEntireTree(state);
 };
 
 export default state;

@@ -7,6 +7,7 @@ import Button from "../../button/Button";
 import FormFeedback from "./formFeedback/FormFeedback";
 
 function SectionComments(props) {
+  debugger;
   let commentsElements = props.commentsData.map((c) => (
     <Comment user={{ ...c }} />
   ));
