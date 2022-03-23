@@ -2,6 +2,8 @@ import React from "react";
 import s from "./FormFeedback.module.scss";
 import Button from "./../../../button/Button";
 import info from "./../../../../image/Info Square.png";
+import plus from "./../../../../image/plus.png";
+import exit from "./../../../../image/exit.png";
 
 function FormFeedback(props) {
   const newUserName = React.createRef();
@@ -18,7 +20,11 @@ function FormFeedback(props) {
 
   return (
     <form className={s.form}>
-      <h3>Отзыв</h3>
+      <div className={s.top}>
+        <h3>Отзыв</h3>
+        <img src={exit} alt="Выход" />
+      </div>
+
       <label className={s.labelName} for="name">
         Как вас зовут?
       </label>
@@ -30,7 +36,7 @@ function FormFeedback(props) {
           placeholder="Имя Фамилия"
           ref={newUserName}
         />
-        <Button value="Загрузить фото" />
+        <Button img={<img src={plus} alt="" />} value="Загрузить фото" />
       </div>
       <label className={s.labelLike} for="like">
         Все ли вам понравилось?

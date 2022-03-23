@@ -8,4 +8,11 @@
   background-color: #585cc6;
   border-color: transparent;
   border-radius: 2px;
+  display: flex;
+  gap: 1rem;
+
+  img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
 }

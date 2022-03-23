@@ -5,9 +5,9 @@ import Carousel from "./carousel/Carousel";
 import s from "./SectionComments.module.scss";
 import Button from "../../button/Button";
 import FormFeedback from "./formFeedback/FormFeedback";
+import plus from "./../../../image/plus.png";
 
 function SectionComments(props) {
-  debugger;
   let commentsElements = props.commentsData.map((c) => (
     <Comment user={{ ...c }} />
   ));
@@ -17,7 +17,11 @@ function SectionComments(props) {
       <div className={s.content}>
         <div className={s.top}>
           <h2>Отзывы</h2>
-          <Button onClick={() => setModalActive(true)} value="Добавить отзыв" />
+          <Button
+            onClick={() => setModalActive(true)}
+            img={<img src={plus} alt="" />}
+            value="Добавить отзыв"
+          />
         </div>
         <Carousel>{commentsElements}</Carousel>
       </div>

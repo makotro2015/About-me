@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Gilroy bold";
+  src: url(./../../../fonts/gilroy-bold.ttf);
+}
+
+@font-face {
+  font-family: "Gilroy light";
+  src: url(./../../../fonts/gilroy-light.ttf);
+}
+
+@font-face {
+  font-family: "Factor A Medium";
+  src: url(./../../../fonts/FactorAMedium-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Factor A Bold";
+  src: url(./../../../fonts/FactorA-Bold.ttf);
+}
+
 .section {
   background-color: transparent;
   padding: 9.3rem 8rem 10rem;
@@ -5,8 +25,8 @@
   margin: auto;
 
   h1 {
+    font-family: "Factor A Medium";
     max-width: 115.7rem;
-    font-weight: 500;
     font-size: 12.4rem;
     line-height: 14.8rem;
     color: white;
@@ -42,6 +62,10 @@
       background-color: white;
       flex-grow: 1;
 
+      b {
+        font-family: "Gilroy bold";
+      }
+
       .nameYear {
         display: flex;
         justify-content: space-between;
@@ -49,14 +73,14 @@
         align-items: center;
 
         h3 {
-          font-weight: 700;
+          font-family: "Factor A Bold";
           font-size: 3.2rem;
           line-height: 3.2rem;
           color: #585cc6;
         }
 
         span {
-          font-weight: 400;
+          font-family: "Gilroy light";
           font-size: 1.8rem;
           line-height: 2.4rem;
           color: #8a8a8a;
@@ -67,7 +91,6 @@
         display: flex;
         justify-content: flex-start;
         gap: 4rem;
-        font-weight: 400;
 
         .gender {
           display: flex;
@@ -76,15 +99,15 @@
         }
       }
 
-      .aboutSelf,
       .ps {
-        font-weight: 500;
+        font-style: italic;
       }
 
       .pet {
         display: flex;
         align-items: center;
         gap: 1.2rem;
+        line-height: 2.4rem;
       }
     }
   }

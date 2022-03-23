@@ -34,9 +34,7 @@ function SectionWelcome(props) {
           <p className={s.aboutSelf}>
             <b>О себе:</b> {props.authorInfo.aboutSelf}
           </p>
-          <p className={s.ps}>
-            <i>WTF: {props.authorInfo.ps}</i>
-          </p>
+          <p className={s.ps}> WTF: {props.authorInfo.ps}</p>
           <p className={s.pet}>
             <img src={pet} alt="Миска с едой" />
             <b>Домашнее животное:</b> {props.authorInfo.pet}

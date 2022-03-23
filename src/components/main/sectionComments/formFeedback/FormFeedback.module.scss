@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Gilroy light";
+  src: url(./../../../../fonts/gilroy-light.ttf);
+}
+
+@font-face {
+  font-family: "Factor A Medium";
+  src: url(./../../../../fonts/FactorAMedium-Regular.ttf);
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -6,10 +16,24 @@
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 2rem;
+  font-family: "Factor A Medium";
 
-  h3 {
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 2rem;
+
+    h3 {
+      font-size: 2.4rem;
+    }
+
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
+  
 
   .labelName {
     margin-bottom: 1.4rem;
@@ -32,6 +56,7 @@
     border: 1px solid #e0e0e0;
     border-radius: 2px;
     outline: none;
+    font-family: "Gilroy light";
   }
 
   textarea {
@@ -53,10 +78,11 @@
       width: 1.5rem;
       height: 1.5rem;
       margin-right: -1rem;
+      position: relative;
+      bottom: 2px;
     }
 
     .infoText {
-      font-weight: 400;
       font-size: 1.2rem;
       line-height: 1.6rem;
       color: #8a8a8a;

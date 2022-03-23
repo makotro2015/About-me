@@ -31,6 +31,23 @@
       height: 5.6rem;
       background-color: white;
       border-color: transparent;
+
+      &:disabled {
+        background-color: #E0E0E0;
+
+        img {
+          opacity: 0.5;
+        }
+      }
+
+      img {
+        height: 2.4rem;
+        width: 2.4rem;
+      }
+
+      img.left {
+        transform: rotate(180deg);
+      }
     }
   }
 
