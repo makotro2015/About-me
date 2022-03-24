@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/About-me/static/css/main.829e3c8a.chunk.css",
+    "main.js": "/About-me/static/js/main.43d34110.chunk.js",
+    "main.js.map": "/About-me/static/js/main.43d34110.chunk.js.map",
+    "runtime~main.js": "/About-me/static/js/runtime~main.2ff819fe.js",
+    "runtime~main.js.map": "/About-me/static/js/runtime~main.2ff819fe.js.map",
+    "static/js/2.5207678d.chunk.js": "/About-me/static/js/2.5207678d.chunk.js",
+    "static/js/2.5207678d.chunk.js.map": "/About-me/static/js/2.5207678d.chunk.js.map",
+    "index.html": "/About-me/index.html",
+    "precache-manifest.bcd93dc166f2407aaac2d9ad92dc2ae0.js": "/About-me/precache-manifest.bcd93dc166f2407aaac2d9ad92dc2ae0.js",
+    "service-worker.js": "/About-me/service-worker.js",
+    "static/css/main.829e3c8a.chunk.css.map": "/About-me/static/css/main.829e3c8a.chunk.css.map",
+    "static/media/SectionWelcome.module.scss": "/About-me/static/media/FactorA-Bold.d2bec4ab.ttf",
+    "static/media/SectionComments.module.scss": "/About-me/static/media/FactorAMedium-Regular.6b8fcd64.ttf",
+    "static/media/author.JPG": "/About-me/static/media/author.c0be81e0.JPG",
+    "static/media/Main.scss": "/About-me/static/media/bg-image.b1d1a235.png",
+    "static/media/Header.module.scss": "/About-me/static/media/gilroy-bold.3cf0ee27.ttf",
+    "static/media/Comment.module.scss": "/About-me/static/media/gilroy-light.608ff54b.ttf",
+    "static/media/index.css": "/About-me/static/media/gilroy-medium.6444f14a.ttf"
+  }
+}
