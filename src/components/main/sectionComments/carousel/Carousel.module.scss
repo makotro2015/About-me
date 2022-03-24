@@ -32,6 +32,7 @@
       background-color: white;
       border-color: transparent;
 
+      &.firstClick,
       &:disabled {
         background-color: #E0E0E0;
 

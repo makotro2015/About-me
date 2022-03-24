@@ -3,7 +3,7 @@ import user2 from "./../image/user2.png";
 import user3 from "./../image/user3.png";
 import user4 from "./../image/user4.png";
 import avatar from "./../image/author.png";
-import { renderEntireTree } from "./../render";
+import { renderEntireTree } from "./../index";
 
 let state = {
   authorInfo: {

@@ -8,8 +8,8 @@ import FormFeedback from "./formFeedback/FormFeedback";
 import plus from "./../../../image/plus.png";
 
 function SectionComments(props) {
-  let commentsElements = props.commentsData.map((c) => (
-    <Comment user={{ ...c }} />
+  let commentsElements = props.commentsData.map((c, index) => (
+    <Comment key={index} user={{ ...c }} />
   ));
   const [modalActive, setModalActive] = useState(false);
   return (
@@ -26,7 +26,9 @@ function SectionComments(props) {
         <Carousel>{commentsElements}</Carousel>
       </div>
       <Modal active={modalActive} setActive={setModalActive}>
-        <FormFeedback addComment={props.addComment} />
+        <FormFeedback
+          addComment={props.addComment}
+        />
       </Modal>
     </section>
   );

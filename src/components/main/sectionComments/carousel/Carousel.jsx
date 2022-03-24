@@ -7,11 +7,11 @@ import arrow from "./../../../../image/Arrow.png";
 function Carousel({ children }) {
   const btnLeftRef = React.createRef();
   const btnRightRef = React.createRef();
-
   const windowCommentsWidth = 108.6;
   // eslint-disable-next-line no-unused-vars
   const [pages, setPages] = useState([]);
   const [offset, setOffset] = useState(0);
+
   useEffect(() => {
     setPages(
       Children.map(children, (child) => {
@@ -40,6 +40,7 @@ function Carousel({ children }) {
   };
 
   const handleRightArrowClick = () => {
+    btnLeftRef.current.classList.remove("Carousel_firstClick__1ahtd");
     btnLeftRef.current.removeAttribute("disabled");
     setOffset((currentOffset) => {
       const newOffset = currentOffset - windowCommentsWidth;
@@ -64,7 +65,11 @@ function Carousel({ children }) {
         </div>
       </div>
       <div className={s.btnsToggle}>
-        <button ref={btnLeftRef} onClick={handleLeftArrowClick}>
+        <button
+          className={s.firstClick}
+          ref={btnLeftRef}
+          onClick={handleLeftArrowClick}
+        >
           <img className={s.left} src={arrow} alt="" />
         </button>
         <button ref={btnRightRef} onClick={handleRightArrowClick}>
