@@ -7,7 +7,11 @@ import arrow from "./../../../../image/Arrow.png";
 function Carousel({ children }) {
   const btnLeftRef = React.createRef();
   const btnRightRef = React.createRef();
-  const windowCommentsWidth = 108.6;
+  let windowCommentsWidth = 108.6;
+  // window.innerWidth < 560
+  //   ? (windowCommentsWidth = 108.6)
+  //   : (windowCommentsWidth = 51.9);
+  console.log(window.innerWidth);
   // eslint-disable-next-line no-unused-vars
   const [pages, setPages] = useState([]);
   const [offset, setOffset] = useState(0);

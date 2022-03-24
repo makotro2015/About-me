@@ -12,7 +12,7 @@ function Comment (props) {
         </div>  
         <p className={s.date}>{props.user.date}</p>       
     </div>
-    <p>{props.user.comment}</p>
+    <p className={s.commentText}>{props.user.comment}</p>
 </div>
     )
 }

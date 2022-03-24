@@ -9,10 +9,12 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
+  z-index: 3;
 
   .content {
-    width: 67.6rem;
-    height: 44.3rem;
+    width: 90%;
+    max-width: 676px;
+    max-height: 443px;
     background-color: white;
     padding: 2.4rem;
     position: fixed;
@@ -31,3 +33,4 @@
   opacity: 1;
   pointer-events: all;
 }
+

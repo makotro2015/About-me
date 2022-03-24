@@ -23,7 +23,6 @@
     display: flex;
     position: absolute;
     left: 115rem;
-    bottom: 6.5rem;
     gap: 1.6rem;
 
     button {
@@ -34,7 +33,7 @@
 
       &.firstClick,
       &:disabled {
-        background-color: #E0E0E0;
+        background-color: #e0e0e0;
 
         img {
           opacity: 0.5;
@@ -51,12 +50,20 @@
       }
     }
   }
+}
 
-  @media (max-width: 1380px) {
+@media (max-width: 560px) {
+  .mainContainer {
+    width: 100%;
+
+    .window {
+      width: 51.9rem;
+      margin: auto;
+    }
+
     .btnsToggle {
-      transform: translateX(-50%);
       left: 50%;
-      bottom: -1.5rem;
+      bottom: 0;
     }
   }
 }

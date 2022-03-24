@@ -12,7 +12,6 @@ const useValidation = (value, validations) => {
   useEffect(() => {
     for (const validation in validations) {
       if (validation === "isEmpty") {
-        console.log(value.length);
         value.length < 3 ? setMinLength(true) : setMinLength(false);
       }
     }
@@ -92,7 +91,6 @@ function FormFeedback(props) {
           onBlur={(e) => inputText.onBlur(e)}
           className={s.inputName}
           placeholder="Имя Фамилия"
-          // autoFocus
           ref={newUserName}
         />
         <Button
@@ -124,10 +122,11 @@ function FormFeedback(props) {
           type="submit"
           value="Отправить отзыв"
         />
-        <img className={s.infoIcon} src={info} alt="Значок информации" />
+        <div className={s.info}><img className={s.infoIcon} src={info} alt="Значок информации" />
         <p className={s.infoText}>
           Все отзывы проходят модерацию в течение 2 часов
         </p>
+        </div>
       </div>
     </form>
   );

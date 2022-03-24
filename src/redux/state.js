@@ -2,7 +2,7 @@ import user1 from "./../image/user1.png";
 import user2 from "./../image/user2.png";
 import user3 from "./../image/user3.png";
 import user4 from "./../image/user4.png";
-import avatar from "./../image/author.png";
+import avatar from "./../image/author.JPG";
 import { renderEntireTree } from "./../index";
 
 let state = {

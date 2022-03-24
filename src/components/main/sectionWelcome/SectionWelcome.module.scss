@@ -38,7 +38,7 @@
 
     .wrapperImg {
       width: 51.9rem;
-      height: 38.3rem;
+      height: 47rem;
       position: relative;
       top: 3.2rem;
       border-radius: 2px;
@@ -47,17 +47,20 @@
 
       img {
         width: 100%;
+        display: block;
+        margin-left: auto;
       }
     }
 
     .authorInfo {
       width: 76.1rem;
-      height: 38.3rem;
+      min-height: 38.3rem;
       padding: 4rem 4rem 4.4rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
+      gap: 2rem;
       border-radius: 2px;
       background-color: white;
       flex-grow: 1;
@@ -74,14 +77,13 @@
 
         h3 {
           font-family: "Factor A Bold";
-          font-size: 3.2rem;
-          line-height: 3.2rem;
+          font-size: 32px;
+          line-height: 32px;
           color: #585cc6;
         }
 
         span {
           font-family: "Gilroy light";
-          font-size: 1.8rem;
           line-height: 2.4rem;
           color: #8a8a8a;
         }
@@ -89,13 +91,24 @@
 
       .townGenderYear {
         display: flex;
+        flex-wrap: wrap;
         justify-content: flex-start;
         gap: 4rem;
+
+        span {
+          flex-wrap: nowrap;
+          display: flex;
+        }
 
         .gender {
           display: flex;
           gap: 1rem;
           align-items: flex-end;
+
+          img {
+            width: 2rem;
+            height: 2rem;
+          }
         }
       }
 
@@ -108,6 +121,57 @@
         align-items: center;
         gap: 1.2rem;
         line-height: 2.4rem;
+
+        img {
+          width: 3.2rem;
+          height: 2.1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 43px 16px 50px;
+
+    h1 {
+      font-size: 48px;
+    }
+
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    .wrapper {
+      flex-direction: column;
+
+      .wrapperImg {
+        width: 105%;
+        height: 111rem;
+
+        img {
+          float: left;
+          height: auto;
+          width: 127rem;
+        }
+      }
+
+      .authorInfo {
+        gap: 16px;
+        width: 100%;
+        z-index: 2;
+
+        .nameYear {
+          flex-direction: column;
+          align-items: flex-start !important;
+          gap: 4px;
+          
+          h3 {
+            font-size: 24px;
+          }
+        }
       }
     }
   }
