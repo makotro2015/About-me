@@ -6,6 +6,7 @@ import s from "./SectionComments.module.scss";
 import Button from "../../button/Button";
 import FormFeedback from "./formFeedback/FormFeedback";
 import plus from "./../../../image/plus.png";
+import Message from "./Message/Message";
 
 function SectionComments(props) {
   let commentsElements = props.commentsData.map((c, index) => (
@@ -37,10 +38,7 @@ function SectionComments(props) {
           setMessageActive={setMessageActive}
         />
       </Modal>
-      <div className={messageActive ? s.message + " " + s.active : s.message}>
-        <h4>Успешно!</h4>
-        <p>Спасибо за отзыв о нашей компании :)</p>
-      </div>
+      <Message messageActive={messageActive} />
     </section>
   );
 }

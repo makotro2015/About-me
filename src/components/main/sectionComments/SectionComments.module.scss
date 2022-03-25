@@ -3,22 +3,6 @@
   src: url(./../../../fonts/FactorAMedium-Regular.ttf);
 }
 
-@keyframes fade {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  90% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    display: none;
-    transform: scale(0);
-  }
-}
-
 .section {
   position: relative;
   background-color: transparent;
@@ -47,36 +31,6 @@
     }
   }
 
-  .message {
-    position: absolute;
-    bottom: 4rem;
-    right: 4rem;
-    width: 43.8rem;
-    height: 132px;
-    min-width: 288px;
-    padding-top: 16px;
-    padding-left: 130px;
-    background: #b5ffa2;
-    border-radius: 32px;
-    font-size: 14px;
-    opacity: 0;
-    transform: scale(0);
-
-    &.active {
-      animation: fade 5s forwards;
-    }
-
-    h4 {
-      font-size: 32px;
-      line-height: 38.5px;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      width: 240px;
-    }
-  }
-
   @media (max-width: 560px) {
     .content {
       width: 100%;
@@ -87,13 +41,5 @@
         }
       }
     }
-
-    .message {
-      padding-left: 90px;
-
-      p {
-        width: 170px;
-      }
-    }
-  }
+}
 }
