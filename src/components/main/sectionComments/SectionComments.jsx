@@ -18,7 +18,7 @@ function SectionComments(props) {
         <div className={s.top}>
           <h2>Отзывы</h2>
           <Button
-            onClick={() => setModalActive(true)}
+            onClick={() =>setModalActive(true)}
             img={<img src={plus} alt="" />}
             value="Добавить отзыв"
           />
@@ -32,6 +32,7 @@ function SectionComments(props) {
           newCommentName={props.newCommentName}
           updateNewCommentText={props.updateNewCommentText}
           updateNewCommentName={props.updateNewCommentName}
+          setActive={setModalActive}
         />
       </Modal>
     </section>

@@ -14,7 +14,7 @@
   .content {
     width: 90%;
     max-width: 676px;
-    max-height: 443px;
+    max-height: fit-content;
     background-color: white;
     padding: 2.4rem;
     position: fixed;
@@ -22,6 +22,12 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%) scale(0.9);
     transition: 0.4s;
+  }
+
+  @media (max-width: 1000px) {
+    .content {
+padding: 16px;
+    }
   }
 
   .content.active {

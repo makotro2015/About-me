@@ -19,16 +19,16 @@ function SectionWelcome(props) {
           </div>
           <div className={s.townGenderYear}>
             <span>
-              <b>Город:</b> {props.authorInfo.town}
+              <b>Город: </b> {props.authorInfo.town}
             </span>
             <div className={s.gender}>
               <span>
-                <b>Пол:</b> {props.authorInfo.gender}
+                <b>Пол: </b> {props.authorInfo.gender}
               </span>{" "}
               <img src={gender} alt="Гендерный знак женщины" />{" "}
             </div>
             <span>
-              <b>Возраст:</b> {props.authorInfo.age}
+              <b>Возраст: </b> {props.authorInfo.age}
             </span>
           </div>
           <p className={s.aboutSelf}>

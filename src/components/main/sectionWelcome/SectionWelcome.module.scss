@@ -67,6 +67,7 @@
 
       b {
         font-family: "Gilroy bold";
+        margin-right: 3px;
       }
 
       .nameYear {
@@ -108,6 +109,8 @@
           img {
             width: 2rem;
             height: 2rem;
+            min-width: 16px;
+            min-height: 16px;
           }
         }
       }
@@ -125,6 +128,8 @@
         img {
           width: 3.2rem;
           height: 2.1rem;
+          min-width: 20px;
+          min-height: 16px;
         }
       }
     }
@@ -138,11 +143,10 @@
     h1 {
       font-size: 48px;
     }
-
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 680px) {
   .section {
     .wrapper {
       flex-direction: column;
@@ -167,7 +171,7 @@
           flex-direction: column;
           align-items: flex-start !important;
           gap: 4px;
-          
+
           h3 {
             font-size: 24px;
           }

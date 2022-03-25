@@ -75,14 +75,15 @@ function FormFeedback(props) {
 
   const addComment = (e) => {
     e.preventDefault();
+    props.setActive(false);
     props.addComment();
   };
 
   return (
-    <form className={s.form} onSubmit={addComment}>
+    <form className={s.form}>
       <div className={s.top}>
         <h3>Отзыв</h3>
-        <img src={exit} alt="Выход" />
+        <img src={exit} alt="Выход" onClick={() => props.setActive(false)} />
       </div>
 
       <label className={s.labelName} htmlFor="name">
@@ -127,10 +128,13 @@ function FormFeedback(props) {
       />
       <div className={s.bottom}>
         <Button
-          disabled={!inputText.inputValid || !textareaText.inputValid}
+          disabled={
+            !inputText.inputValid || !textareaText.inputValid
+          }
           className={s.btn}
           type="submit"
           value="Отправить отзыв"
+          onClick={addComment}
         />
         <div className={s.info}>
           <img className={s.infoIcon} src={info} alt="Значок информации" />
