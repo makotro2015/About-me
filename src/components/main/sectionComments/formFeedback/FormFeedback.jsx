@@ -75,15 +75,21 @@ function FormFeedback(props) {
 
   const addComment = (e) => {
     e.preventDefault();
-    props.setActive(false);
+    props.setModalActive(false);
+    props.setMessageActive(true);
     props.addComment();
+    setTimeout(() => props.setMessageActive(false), 5000);
   };
 
   return (
     <form className={s.form}>
       <div className={s.top}>
         <h3>Отзыв</h3>
-        <img src={exit} alt="Выход" onClick={() => props.setActive(false)} />
+        <img
+          src={exit}
+          alt="Выход"
+          onClick={() => props.setModalActive(false)}
+        />
       </div>
 
       <label className={s.labelName} htmlFor="name">
@@ -128,9 +134,6 @@ function FormFeedback(props) {
       />
       <div className={s.bottom}>
         <Button
-          disabled={
-            !inputText.inputValid || !textareaText.inputValid
-          }
           className={s.btn}
           type="submit"
           value="Отправить отзыв"

@@ -12,13 +12,14 @@ function SectionComments(props) {
     <Comment key={index} user={{ ...c }} />
   ));
   const [modalActive, setModalActive] = useState(false);
+  const [messageActive, setMessageActive] = useState(false);
   return (
     <section className={s.section}>
       <div className={s.content}>
         <div className={s.top}>
           <h2>Отзывы</h2>
           <Button
-            onClick={() =>setModalActive(true)}
+            onClick={() => setModalActive(true)}
             img={<img src={plus} alt="" />}
             value="Добавить отзыв"
           />
@@ -32,9 +33,14 @@ function SectionComments(props) {
           newCommentName={props.newCommentName}
           updateNewCommentText={props.updateNewCommentText}
           updateNewCommentName={props.updateNewCommentName}
-          setActive={setModalActive}
+          setModalActive={setModalActive}
+          setMessageActive={setMessageActive}
         />
       </Modal>
+      <div className={messageActive ? s.message + " " + s.active : s.message}>
+        <h4>Успешно!</h4>
+        <p>Спасибо за отзыв о нашей компании :)</p>
+      </div>
     </section>
   );
 }
