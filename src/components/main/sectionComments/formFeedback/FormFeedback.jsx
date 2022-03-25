@@ -75,10 +75,7 @@ function FormFeedback(props) {
 
   const addComment = (e) => {
     e.preventDefault();
-    const userName = newUserName.current.value;
-    const commentText = newCommentText.current.value;
-    props.addComment(userName, commentText);
-    props.clearInput(userName, commentText);
+    props.addComment();
   };
 
   return (

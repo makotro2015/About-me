@@ -32,7 +32,6 @@ function SectionComments(props) {
           newCommentName={props.newCommentName}
           updateNewCommentText={props.updateNewCommentText}
           updateNewCommentName={props.updateNewCommentName}
-          clearInput={props.clearInput}
         />
       </Modal>
     </section>

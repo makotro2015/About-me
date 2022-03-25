@@ -3,7 +3,8 @@ import user2 from "./../image/user2.png";
 import user3 from "./../image/user3.png";
 import user4 from "./../image/user4.png";
 import avatar from "./../image/author.JPG";
-import { rerenderEntireTree } from "./../index";
+
+let rerenderEntireTree = () => {}
 
 let state = {
   authorInfo: {
@@ -54,14 +55,16 @@ let state = {
   ],
 };
 
-export const addComment = (name, comment) => {
+export const addComment = () => {
   const newComment = {
     url: { user2 },
-    name: name,
+    name: state.newCommentName,
     date: "16.12.2021",
-    comment: comment,
+    comment: state.newCommentText,
   };
   state.commentsData.push(newComment);
+  state.newCommentText = "";
+  state.newCommentName = "";
   rerenderEntireTree(state);
 };
 
@@ -75,11 +78,8 @@ export const updateNewCommentName = (newText) => {
   rerenderEntireTree(state);
 };
 
-export const clearInput = (userName, commentText) => {
-  debugger;
-  state.newCommentText = "";
-  state.newCommentName = "";
-  rerenderEntireTree(state);
+export const subscribe = (observer) => {
+  rerenderEntireTree = observer;
 };
 
 export default state;

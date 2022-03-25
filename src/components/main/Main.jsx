@@ -14,7 +14,6 @@ function Main(props) {
         addComment={props.addComment}
         updateNewCommentText={props.updateNewCommentText}
         updateNewCommentName={props.updateNewCommentName}
-        clearInput={props.clearInput}
       />
     </main>
   );
