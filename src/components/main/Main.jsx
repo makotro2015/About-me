@@ -9,7 +9,12 @@ function Main(props) {
       <SectionWelcome authorInfo={props.state.authorInfo} />
       <SectionComments
         commentsData={props.state.commentsData}
+        newCommentText={props.state.newCommentText}
+        newCommentName={props.state.newCommentName}
         addComment={props.addComment}
+        updateNewCommentText={props.updateNewCommentText}
+        updateNewCommentName={props.updateNewCommentName}
+        clearInput={props.clearInput}
       />
     </main>
   );

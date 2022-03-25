@@ -28,6 +28,11 @@ function SectionComments(props) {
       <Modal active={modalActive} setActive={setModalActive}>
         <FormFeedback
           addComment={props.addComment}
+          newCommentText={props.newCommentText}
+          newCommentName={props.newCommentName}
+          updateNewCommentText={props.updateNewCommentText}
+          updateNewCommentName={props.updateNewCommentName}
+          clearInput={props.clearInput}
         />
       </Modal>
     </section>

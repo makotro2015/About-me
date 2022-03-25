@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useState, useEffect } from "react";
 import s from "./FormFeedback.module.scss";
 import Button from "./../../../button/Button";
 import info from "./../../../../image/Info Square.png";
@@ -35,6 +36,7 @@ const useInput = (initialValue, validations) => {
   const [value, setValue] = useState(initialValue);
   const [isDirty, setDirty] = useState(false);
   const valid = useValidation(value, validations);
+
   const onChange = (e) => {
     setValue(e.target.value);
   };
@@ -59,13 +61,24 @@ function FormFeedback(props) {
   const inputText = useInput("", { isEmpty: true });
   const textareaText = useInput("", { isEmpty: true });
 
+  const onCommentTextChange = (e) => {
+    const text = newCommentText.current.value;
+    props.updateNewCommentText(text);
+    textareaText.onChange(e);
+  };
+
+  const onCommentNameChange = (e) => {
+    const text = newUserName.current.value;
+    props.updateNewCommentName(text);
+    inputText.onChange(e);
+  };
+
   const addComment = (e) => {
     e.preventDefault();
     const userName = newUserName.current.value;
     const commentText = newCommentText.current.value;
     props.addComment(userName, commentText);
-    newUserName.current.value = "";
-    newCommentText.current.value = "";
+    props.clearInput(userName, commentText);
   };
 
   return (
@@ -86,8 +99,8 @@ function FormFeedback(props) {
           id="name"
           name="inputText"
           type="text"
-          value={inputText.value}
-          onChange={(e) => inputText.onChange(e)}
+          value={props.newCommentName}
+          onChange={onCommentNameChange}
           onBlur={(e) => inputText.onBlur(e)}
           className={s.inputName}
           placeholder="Имя Фамилия"
@@ -109,8 +122,8 @@ function FormFeedback(props) {
       <textarea
         id="like"
         name="textareaText"
-        value={textareaText.value}
-        onChange={(e) => textareaText.onChange(e)}
+        value={props.newCommentText}
+        onChange={onCommentTextChange}
         onBlur={(e) => textareaText.onBlur(e)}
         placeholder="Напишите пару слов о вашем опыте..."
         ref={newCommentText}
@@ -122,10 +135,11 @@ function FormFeedback(props) {
           type="submit"
           value="Отправить отзыв"
         />
-        <div className={s.info}><img className={s.infoIcon} src={info} alt="Значок информации" />
-        <p className={s.infoText}>
-          Все отзывы проходят модерацию в течение 2 часов
-        </p>
+        <div className={s.info}>
+          <img className={s.infoIcon} src={info} alt="Значок информации" />
+          <p className={s.infoText}>
+            Все отзывы проходят модерацию в течение 2 часов
+          </p>
         </div>
       </div>
     </form>

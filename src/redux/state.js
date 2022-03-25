@@ -3,7 +3,7 @@ import user2 from "./../image/user2.png";
 import user3 from "./../image/user3.png";
 import user4 from "./../image/user4.png";
 import avatar from "./../image/author.JPG";
-import { renderEntireTree } from "./../index";
+import { rerenderEntireTree } from "./../index";
 
 let state = {
   authorInfo: {
@@ -18,6 +18,9 @@ let state = {
     ps: "И да, у меня тоже есть милая кошка :)",
     pet: "есть",
   },
+
+  newCommentText: "",
+  newCommentName: "",
 
   commentsData: [
     {
@@ -59,7 +62,26 @@ export const addComment = (name, comment) => {
     comment: comment,
   };
   state.commentsData.push(newComment);
-  renderEntireTree(state);
+  rerenderEntireTree(state);
+};
+
+export const updateNewCommentText = (newText) => {
+  state.newCommentText = newText;
+  rerenderEntireTree(state);
+};
+
+export const updateNewCommentName = (newText) => {
+  state.newCommentName = newText;
+  rerenderEntireTree(state);
+};
+
+export const clearInput = (userName, commentText) => {
+  debugger;
+  state.newCommentText = "";
+  state.newCommentName = "";
+  rerenderEntireTree(state);
 };
 
 export default state;
+
+window.state = state;

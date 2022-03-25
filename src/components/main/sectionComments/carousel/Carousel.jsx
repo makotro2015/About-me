@@ -11,7 +11,6 @@ function Carousel({ children }) {
   // window.innerWidth < 560
   //   ? (windowCommentsWidth = 108.6)
   //   : (windowCommentsWidth = 51.9);
-  console.log(window.innerWidth);
   // eslint-disable-next-line no-unused-vars
   const [pages, setPages] = useState([]);
   const [offset, setOffset] = useState(0);

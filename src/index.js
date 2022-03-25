@@ -1,17 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import state, { addComment } from "./redux/state";
+import state, { addComment, updateNewCommentText, updateNewCommentName, clearInput } from "./redux/state";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 
-export const renderEntireTree = (state) => {
+export const rerenderEntireTree = (state) => {
   ReactDOM.render(
-    <App state={state} addComment={addComment} />,
+    <App state={state} addComment={addComment} updateNewCommentText={updateNewCommentText} updateNewCommentName={updateNewCommentName} clearInput={clearInput}/>,
     document.getElementById("root")
   );
 };
 
-renderEntireTree(state);
+rerenderEntireTree(state);
 
 serviceWorker.unregister();
