@@ -27,7 +27,9 @@
 
     button {
       width: 5.6rem;
+      min-width: 45px;
       height: 5.6rem;
+      min-height: 45px;
       background-color: white;
       border-color: transparent;
 
@@ -43,6 +45,8 @@
       img {
         height: 2.4rem;
         width: 2.4rem;
+        min-width: 20px;
+        min-height: 20px;
       }
 
       img.left {
@@ -63,7 +67,8 @@
 
     .btnsToggle {
       left: 50%;
-      bottom: 0;
+      bottom: -14%;
+      transform: translateX(-50%);
     }
   }
 }
