@@ -6,6 +6,7 @@ import state, {
   updateNewCommentText,
   updateNewCommentName,
   subscribe,
+  addMessage
 } from "./redux/state";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
@@ -15,6 +16,7 @@ const rerenderEntireTree = (state) => {
     <App
       state={state}
       addComment={addComment}
+      addMessage={addMessage}
       updateNewCommentText={updateNewCommentText}
       updateNewCommentName={updateNewCommentName}
     />,

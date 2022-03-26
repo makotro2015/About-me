@@ -11,9 +11,11 @@ function Main(props) {
         commentsData={props.state.commentsData}
         newCommentText={props.state.newCommentText}
         newCommentName={props.state.newCommentName}
+        currentMessage={props.state.currentMessage}
         addComment={props.addComment}
         updateNewCommentText={props.updateNewCommentText}
         updateNewCommentName={props.updateNewCommentName}
+        addMessage={props.addMessage}
       />
     </main>
   );

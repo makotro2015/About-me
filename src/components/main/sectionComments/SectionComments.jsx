@@ -36,9 +36,10 @@ function SectionComments(props) {
           updateNewCommentName={props.updateNewCommentName}
           setModalActive={setModalActive}
           setMessageActive={setMessageActive}
+          addMessage={props.addMessage}
         />
       </Modal>
-      <Message messageActive={messageActive} />
+      <Message messageActive={messageActive} currentMessage={props.currentMessage} />
     </section>
   );
 }

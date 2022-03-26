@@ -3,6 +3,10 @@ import user2 from "./../image/user2.png";
 import user3 from "./../image/user3.png";
 import user4 from "./../image/user4.png";
 import avatar from "./../image/author.JPG";
+import success from "./../image/success.png";
+import fail from "./../image/fail.png";
+import bgSuccess from "./../image/greenBubbles.png";
+import bgFail from "./../image/redBubbles.png";
 
 let rerenderEntireTree = () => {}
 
@@ -53,18 +57,52 @@ let state = {
         "Отвечала за найм и адаптацию сотрудников в компании, за поддержание на нужном уровне HR-бренда и трудового настроя коллектива. В компанию пришла без опыта работы HR-ом. Всему научилась здесь. Как теории, так и практике. Набрала опыт достаточно быстро. Есть программа обучения, поощряются различные курсы, и это большой плюс. В коллективе очень дружная атмосфера. Все дружелюбные, амбициозные.",
     },
   ],
+
+  currentMessage: {
+    src: '',
+    title: '',
+    text: '',
+    alt : '',
+  },
+  messageSuccess: {
+    src: { success },
+    title: 'Успешно!',
+    text: 'Спасибо за отзыв о нашей компании :)',
+    alt : 'Успешно',
+    style: {
+    'background': '#b5ffa2',
+    'backgroundImage': `url(${ bgSuccess })`,
+    }
+  },
+  messageFail: {
+    src: { fail },
+    title: 'Что-то не так...',
+    text: 'Не получилось отправить отзыв. Попробуйте еще раз!',
+    alt : 'Ошибка',
+    style: {
+      'background':'#F64B3C',
+      'color': 'white',
+      'backgroundImage': `url(${ bgFail })`,
+    }
+  }
 };
 
+export const addMessage = () => {
+  state.currentMessage = state.newCommentText && state.newCommentName ? state.messageSuccess : state.messageFail;
+}
+
 export const addComment = () => {
-  const newComment = {
-    url: { user2 },
-    name: state.newCommentName,
-    date: "16.12.2021",
-    comment: state.newCommentText,
-  };
-  state.commentsData.push(newComment);
-  state.newCommentText = "";
-  state.newCommentName = "";
+  if (state.newCommentText && state.newCommentName) {
+    const newComment = {
+      url: { user2 },
+      name: state.newCommentName,
+      date: "16.12.2021",
+      comment: state.newCommentText,
+    };
+    state.commentsData.push(newComment);
+    state.newCommentText = "";
+    state.newCommentName = "";
+  } 
   rerenderEntireTree(state);
 };
 

@@ -9,7 +9,12 @@ function App(props) {
   return (  
     <div className='app'>
     <Header authorInfo={props.state.authorInfo} />
-    <Main state={props.state} addComment={props.addComment} updateNewCommentText={props.updateNewCommentText} updateNewCommentName={props.updateNewCommentName} />
+    <Main 
+    state={props.state} 
+    addComment={props.addComment} 
+    updateNewCommentText={props.updateNewCommentText} 
+    updateNewCommentName={props.updateNewCommentName} 
+    addMessage={props.addMessage}/>
     <Footer />
     </div>
   );

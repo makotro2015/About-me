@@ -77,6 +77,7 @@ function FormFeedback(props) {
     e.preventDefault();
     props.setModalActive(false);
     props.setMessageActive(true);
+    props.addMessage();
     props.addComment();
     setTimeout(() => props.setMessageActive(false), 5000);
   };

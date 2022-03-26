@@ -24,14 +24,12 @@
     min-width: 288px;
     padding-top: 16px;
     padding-left: 130px;
-    background: #b5ffa2;
     border-radius: 32px;
     font-size: 14px;
     opacity: 0;
     transform: scale(0);
-    background-image: url("./../../../../image/green\ bubbles.png");
-    background-repeat: no-repeat;
-    background-position-y: bottom;
+    background-repeat: no-repeat !important;
+    background-position-y: bottom !important;
 
     &.active {
       animation: fade 5s forwards;
