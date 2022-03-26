@@ -8,7 +8,9 @@ function Carousel({ children }) {
   const btnLeftRef = React.createRef();
   const btnRightRef = React.createRef();
   let windowCommentsWidth = 108.6;
-  // window.innerWidth < 560
+  if (window.innerWidth < 560) {
+    windowCommentsWidth = windowCommentsWidth / 2;
+  }
   //   ? (windowCommentsWidth = 108.6)
   //   : (windowCommentsWidth = 51.9);
   // eslint-disable-next-line no-unused-vars
@@ -47,7 +49,10 @@ function Carousel({ children }) {
     btnLeftRef.current.removeAttribute("disabled");
     setOffset((currentOffset) => {
       const newOffset = currentOffset - windowCommentsWidth;
-      const maxOffset = -(windowCommentsWidth * (children.length / 2 - 1));
+      let maxOffset = -(windowCommentsWidth * (children.length / 2 - 1));
+      if (window.innerWidth < 560) {
+        maxOffset = -(windowCommentsWidth * (children.length - 1));
+      } 
       if (newOffset === maxOffset) {
         btnRightRef.current.disabled = "true";
       }
