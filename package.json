@@ -4,9 +4,9 @@
   "private": true,
   "homepage": " https://makotro2015.github.io/About-me",
   "dependencies": {
-    "node-sass": "^4.14.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "node-sass": "4.14.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-scripts": "3.1.1"
   },
   "scripts": {
@@ -33,6 +33,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "3.2.3"
   }
 }

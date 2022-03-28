@@ -63,13 +63,13 @@ function FormFeedback(props) {
 
   const onCommentTextChange = (e) => {
     const text = newCommentText.current.value;
-    props.updateNewCommentText(text);
+    props.dispatch({ type: "UPDATE-NEW-COMMENT-TEXT", newText: text });
     textareaText.onChange(e);
   };
 
   const onCommentNameChange = (e) => {
     const text = newUserName.current.value;
-    props.updateNewCommentName(text);
+    props.dispatch({ type: "UPDATE-NEW-COMMENT-NAME", newText: text });
     inputText.onChange(e);
   };
 
@@ -77,8 +77,8 @@ function FormFeedback(props) {
     e.preventDefault();
     props.setModalActive(false);
     props.setMessageActive(true);
-    props.addMessage();
-    props.addComment();
+    props.dispatch({ type: "ADD-MESSAGE" });
+    props.dispatch({ type: "ADD-COMMENT" });
     setTimeout(() => props.setMessageActive(false), 5000);
   };
 

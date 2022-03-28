@@ -12,10 +12,7 @@ function Main(props) {
         newCommentText={props.state.newCommentText}
         newCommentName={props.state.newCommentName}
         currentMessage={props.state.currentMessage}
-        addComment={props.addComment}
-        updateNewCommentText={props.updateNewCommentText}
-        updateNewCommentName={props.updateNewCommentName}
-        addMessage={props.addMessage}
+        dispatch={props.dispatch}
       />
     </main>
   );

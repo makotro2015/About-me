@@ -1,31 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import state, {
-  addComment,
-  updateNewCommentText,
-  updateNewCommentName,
-  subscribe,
-  addMessage
-} from "./redux/state";
+import store from "./redux/state";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 
-const rerenderEntireTree = (state) => {
+const rerenderEntireTree = (store) => {
   ReactDOM.render(
-    <App
-      state={state}
-      addComment={addComment}
-      addMessage={addMessage}
-      updateNewCommentText={updateNewCommentText}
-      updateNewCommentName={updateNewCommentName}
-    />,
+    <App state={store.getState()} dispatch={store.dispatch.bind(store)} />,
     document.getElementById("root")
   );
 };
 
-rerenderEntireTree(state);
+rerenderEntireTree(store);
 
-subscribe(rerenderEntireTree);
+store.subscribe(rerenderEntireTree);
 
 serviceWorker.unregister();

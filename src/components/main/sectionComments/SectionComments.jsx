@@ -29,17 +29,17 @@ function SectionComments(props) {
       </div>
       <Modal active={modalActive} setActive={setModalActive}>
         <FormFeedback
-          addComment={props.addComment}
+          dispatch={props.dispatch}
           newCommentText={props.newCommentText}
           newCommentName={props.newCommentName}
-          updateNewCommentText={props.updateNewCommentText}
-          updateNewCommentName={props.updateNewCommentName}
           setModalActive={setModalActive}
           setMessageActive={setMessageActive}
-          addMessage={props.addMessage}
         />
       </Modal>
-      <Message messageActive={messageActive} currentMessage={props.currentMessage} />
+      <Message
+        messageActive={messageActive}
+        currentMessage={props.currentMessage}
+      />
     </section>
   );
 }
