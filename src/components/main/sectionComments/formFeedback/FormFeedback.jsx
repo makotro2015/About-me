@@ -5,6 +5,12 @@ import Button from "./../../../button/Button";
 import info from "./../../../../image/Info Square.png";
 import plus from "./../../../../image/plus.png";
 import exit from "./../../../../image/exit.png";
+import {
+  updateNewCommentTextActionCreator,
+  updateNewCommentNameActionCreator,
+  addMessageActionCreator,
+  addCommentActionCreator,
+} from "./../../../../redux/state.js";
 
 const useValidation = (value, validations) => {
   const [minLength, setMinLength] = useState(true);
@@ -63,13 +69,13 @@ function FormFeedback(props) {
 
   const onCommentTextChange = (e) => {
     const text = newCommentText.current.value;
-    props.dispatch({ type: "UPDATE-NEW-COMMENT-TEXT", newText: text });
+    props.dispatch(updateNewCommentTextActionCreator(text));
     textareaText.onChange(e);
   };
 
   const onCommentNameChange = (e) => {
     const text = newUserName.current.value;
-    props.dispatch({ type: "UPDATE-NEW-COMMENT-NAME", newText: text });
+    props.dispatch(updateNewCommentNameActionCreator(text));
     inputText.onChange(e);
   };
 
@@ -77,8 +83,8 @@ function FormFeedback(props) {
     e.preventDefault();
     props.setModalActive(false);
     props.setMessageActive(true);
-    props.dispatch({ type: "ADD-MESSAGE" });
-    props.dispatch({ type: "ADD-COMMENT" });
+    props.dispatch(addMessageActionCreator());
+    props.dispatch(addCommentActionCreator());
     setTimeout(() => props.setMessageActive(false), 5000);
   };
 

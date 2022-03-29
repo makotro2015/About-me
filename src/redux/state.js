@@ -8,6 +8,11 @@ import fail from "./../image/fail.png";
 import bgSuccess from "./../image/greenBubbles.png";
 import bgFail from "./../image/redBubbles.png";
 
+const ADD_MESSAGE = "ADD-MESSAGE";
+const ADD_COMMENT = "ADD-COMMENT";
+const UPDATE_NEW_COMMENT_TEXT = "UPDATE-NEW-COMMENT-TEXT";
+const UPDATE_NEW_COMMENT_NAME = "UPDATE-NEW-COMMENT-NAME";
+
 let store = {
   _state: {
     authorInfo: {
@@ -95,12 +100,12 @@ let store = {
   },
 
   dispatch(action) {
-    if (action.type === "ADD-MESSAGE") {
+    if (action.type === ADD_MESSAGE) {
       this._state.currentMessage =
         this._state.newCommentText && this._state.newCommentName
           ? this._state.messageSuccess
           : this._state.messageFail;
-    } else if (action.type === "ADD-COMMENT") {
+    } else if (action.type === ADD_COMMENT) {
       if (this._state.newCommentText && this._state.newCommentName) {
         const newComment = {
           url: { user2 },
@@ -113,44 +118,29 @@ let store = {
         this._state.newCommentName = "";
       }
       this._callSubscriber(store);
-    } else if (action.type === "UPDATE-NEW-COMMENT-TEXT") {
+    } else if (action.type === UPDATE_NEW_COMMENT_TEXT) {
       this._state.newCommentText = action.newText;
       this._callSubscriber(store);
-    } else if (action.type === "UPDATE-NEW-COMMENT-NAME") {
+    } else if (action.type === UPDATE_NEW_COMMENT_NAME) {
       this._state.newCommentName = action.newText;
       this._callSubscriber(store);
     } else {
       console.warn("Нет такого метода, ошибка в названии типа!");
     }
   },
-  // addMessage() {
-  //   this._state.currentMessage =
-  //     this._state.newCommentText && this._state.newCommentName
-  //       ? this._state.messageSuccess
-  //       : this._state.messageFail;
-  // },
-  // addComment() {
-  //   if (this._state.newCommentText && this._state.newCommentName) {
-  //     const newComment = {
-  //       url: { user2 },
-  //       name: this._state.newCommentName,
-  //       date: "16.12.2021",
-  //       comment: this._state.newCommentText,
-  //     };
-  //     this._state.commentsData.push(newComment);
-  //     this._state.newCommentText = "";
-  //     this._state.newCommentName = "";
-  //   }
-  //   this._callSubscriber(store);
-  // },
-  // updateNewCommentText(newText) {
-  //   this._state.newCommentText = newText;
-  //   this._callSubscriber(store);
-  // },
-  // updateNewCommentName(newText) {
-  //   this._state.newCommentName = newText;
-  //   this._callSubscriber(store);
-  // },
+};
+
+export const updateNewCommentTextActionCreator = (text) => {
+  return { type: "UPDATE-NEW-COMMENT-TEXT", newText: text };
+};
+export const updateNewCommentNameActionCreator = (text) => {
+  return { type: "UPDATE-NEW-COMMENT-NAME", newText: text };
+};
+export const addMessageActionCreator = () => {
+  return { type: "ADD-MESSAGE" };
+};
+export const addCommentActionCreator = () => {
+  return { type: "ADD-COMMENT" };
 };
 
 export default store;
