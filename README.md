@@ -1,3 +1,7 @@
+## Ссылка на GitHub Pages
+
+https://makotro2015.github.io/About-me/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
