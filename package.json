@@ -4,7 +4,7 @@
   "private": true,
   "homepage": " https://makotro2015.github.io/About-me",
   "dependencies": {
-    "node-sass": "4.14.1",
+    "node-sass": "^4.14.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-scripts": "3.1.1"

@@ -23,8 +23,8 @@ let store = {
       gender: "женщина",
       age: "27",
       aboutSelf:
-        'Всем привет! Меня зовут Алена, и я очень хочу работать фронтенд-разработчиком :) На данный момент прошла программу повышения квалификации по направлению "Технологии фронтенд разработки", прошла стажировку в течение 1,5 месяцев. Сейчас нахожусь в поиске команды разработчиков, с которой будем творить крутые проекты :)',
-      ps: "И да, у меня тоже есть милая кошка :)",
+        'Привет! Меня зовут Алена, и я очень хочу стать крутым фронтенд-разработчиком :) На данный момент изучила HTML, CSS, JS, знаю основы TypeScript, React, Redux, запросы на сервер и обработу ответов. На данный момент углубляюсь в React. Очень хочу и дальше развиваться и расти в этом направлении :)',
+      ps: "Присылайте тестовое задание и зовите на собес :)",
       pet: "есть",
     },
 
@@ -130,18 +130,16 @@ let store = {
   },
 };
 
-export const updateNewCommentTextActionCreator = (text) => {
-  return { type: "UPDATE-NEW-COMMENT-TEXT", newText: text };
-};
-export const updateNewCommentNameActionCreator = (text) => {
-  return { type: "UPDATE-NEW-COMMENT-NAME", newText: text };
-};
-export const addMessageActionCreator = () => {
-  return { type: "ADD-MESSAGE" };
-};
-export const addCommentActionCreator = () => {
-  return { type: "ADD-COMMENT" };
-};
+export const updateNewCommentTextActionCreator = (text) => ({
+  type: "UPDATE-NEW-COMMENT-TEXT",
+  newText: text,
+});
+export const updateNewCommentNameActionCreator = (text) => ({
+  type: "UPDATE-NEW-COMMENT-NAME",
+  newText: text,
+});
+export const addMessageActionCreator = () => ({ type: "ADD-MESSAGE" });
+export const addCommentActionCreator = () => ({ type: "ADD-COMMENT" });
 
 export default store;
 
