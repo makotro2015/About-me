@@ -23,7 +23,7 @@ let store = {
       gender: "женщина",
       age: "27",
       aboutSelf:
-        'Привет! Меня зовут Алена, и я очень хочу стать крутым фронтенд-разработчиком :) На данный момент изучила HTML, CSS, JS, знаю основы TypeScript, React, Redux, запросы на сервер и обработу ответов. На данный момент углубляюсь в React. Очень хочу и дальше развиваться и расти в этом направлении :)',
+        "Привет! Меня зовут Алена, и я очень хочу стать крутым фронтенд-разработчиком :) На данный момент изучила HTML, CSS, JS, знаю основы TypeScript, React, Redux, запросы на сервер и обработу ответов. На данный момент углубляюсь в React. Очень хочу и дальше развиваться и расти в этом направлении :)",
       ps: "Присылайте тестовое задание и зовите на собес :)",
       pet: "есть",
     },
@@ -110,7 +110,7 @@ let store = {
         const newComment = {
           url: { user2 },
           name: this._state.newCommentName,
-          date: "16.12.2021",
+          date: new Date().toLocaleDateString(),
           comment: this._state.newCommentText,
         };
         this._state.commentsData.push(newComment);
@@ -142,5 +142,3 @@ export const addMessageActionCreator = () => ({ type: "ADD-MESSAGE" });
 export const addCommentActionCreator = () => ({ type: "ADD-COMMENT" });
 
 export default store;
-
-window.store = store;
